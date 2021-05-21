@@ -3,4 +3,5 @@
 lúc đó app xử lí chính -->
 <?php
     require_once "./mvc/Core/app.php";
+    require_once "./mvc/Core/Controller.php";
 ?>

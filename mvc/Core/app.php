@@ -12,6 +12,8 @@ class App
             unset($arr[0]);
         }
         require_once "./mvc/Controlers/" . $this->controller . ".php";
+        $this->controller = new $this->controller; //  nghĩa là gán controller = new Home,News ( class )
+        // phải tạo đối tượng để
         // Xử lí action
         if (isset($arr[1])) {
             if (method_exists($this->controller, $arr[1])) // method_exist: kiểm tra xem phương 
