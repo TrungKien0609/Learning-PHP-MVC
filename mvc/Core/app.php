@@ -33,7 +33,8 @@ class App
     function UrlProcess()
     {
         if (isset($_GET['url'])) {
-            return   explode("/", filter_var(trim($_GET['url'])));
+            return   explode("/",filter_var(trim($_GET['url'],"/"),FILTER_SANITIZE_URL));
+            
         }
     }
 }
